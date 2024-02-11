@@ -100,15 +100,32 @@ fun OnboardingScreen(navController: NavHostController, context: MainActivity) {
                 )
                 if(currentPage==0) {
                     Text(
-                        text = descriptions[currentPage],
+                        text = "Your Guide to Good Health",
                         Modifier.padding(top = 45.dp),
                         textAlign = TextAlign.Center,
                         fontSize = 20.sp
 
                     )
                 }
-                else{
+                else if(currentPage==1){
+                    Text(
+                        text = descriptions[currentPage],
+                        Modifier.padding(top = 45.dp).padding(10.dp),
+                        textAlign = TextAlign.Center,
+                        fontSize = 20.sp,
+
+
+                    )
                     TextFieldWithIcons(s = "Name")
+                }
+                else{
+                    Text(
+                        text = descriptions[currentPage],
+                        Modifier.padding(top = 45.dp),
+                        textAlign = TextAlign.Center,
+                        fontSize = 20.sp
+
+                    )
                 }
             }
         }
